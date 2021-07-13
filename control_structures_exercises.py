@@ -57,10 +57,92 @@ while i > 0:
     print(i)
     i = i - 5
 
-#2b prompt user for a number, then show a multiplication table up through 10 for that number
+#2bi prompt user for a number, then show a multiplication table up through 10 for that number
 print('Input a number')
 number = input()
-for i in range(0, 11)
-product = number * i
-print(f"{number} * {i} = {product}")
-i += 1
+for i in range(0, 11):
+    product = number * i
+    print(f"{number} * {i} = {product}")
+    i += 1
+
+#2bii creat a for loop that prints the equivalent of an example table (given in exercise worksheet)
+for i in range(1, 10):
+    str_i = str(i)
+    print(str_i * i)
+    i += 1
+
+#2ci prompt user for an odd number between 1 and 50. use a loop and break to to continue prompting the user if input is invalid
+i = 1
+while i <= 10:
+    n = input()
+    n = float(n)
+    if (n % 2 != 0) and ((n >= 1) and (n <= 50)):
+        break
+
+# use loop and continue to count odd numbers between 1 and 50 while skipping "n"
+print("The number to skip is : ", n)
+for i in range(1,50):
+    if (i != n) and (i % 2 != 0):
+        print(i)
+        continue
+
+#2d prompt use for n, and use a loop to count from 0 to n
+n = input()
+n = int(n)
+if type(n) == int:
+    for i in range(0, n + 1):
+        print(i)
+        i += 1
+
+#2e prompt for a positive integer n, then write a loop that prints the integers between n and 1 (inclusive)
+n = input()
+n = int(n)
+if type(n) == int:
+    for i in range(1, n + 1):
+        print(i)
+        i += 1
+
+#3 fizzbuzz test, fizz for divisible by 3, buzz for divisible by 5, otherwise print i from 1 to 100
+for i in range(1, 101):
+    if (i % 3 == 0) and (i % 5 == 0):
+        print("FizzBuzz")
+    elif (i % 3 == 0):
+        print("Fizz")
+    elif (i % 5 == 0):
+        print("Buzz")
+    else:
+        print(i)
+
+#4 prompt for n, for int between i and n; show i, i^2, and i^3
+n = input()
+n = int(n)
+for i in range(1, n + 1):
+    sq = i ** 2
+    cb = i ** 3
+    print(i, sq, cb)
+
+#5 convert number grades into letter grades for prompted test score
+while True:
+    print("Input 'yes' if you wish to continue or 'no' if you are finished")
+    prompt_yn = input()
+    if str.lower(prompt_yn) == 'no':
+        break
+    elif str.lower(prompt_yn) != 'yes':
+        continue
+    else:
+        print("Enter score")
+        score = int(input())
+        if score <= 100 and score >= 88:
+            grade = 'A'
+        elif score <= 87 and score >= 80:
+            grade = 'B'
+        elif score <= 79 and score >= 67:
+            grade = 'C'
+        elif score <= 66 and score >= 60:
+            grade = 'D'
+        elif score <= 59 and score >= 0:
+            grade = 'F'
+        else:
+            grade = 'Score is out of expected range'
+    print(grade)
+    continue
