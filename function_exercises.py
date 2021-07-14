@@ -6,7 +6,7 @@ def is_two(n):
         result = False
     return result
 
-outcome = is_two(2)
+#outcome = is_two(2)
 
 #2 create a function that takes a string and returns True if that string is a vowel
 def is_vowel(character):
@@ -16,8 +16,8 @@ def is_vowel(character):
         result = False
     return result
 
-result = is_vowel('e')
-print(result)
+#result = is_vowel('e')
+#print(result)
 
 #3 modify is_vowel to return True for consonants and False otherwise
 def is_consonant(character):
@@ -27,8 +27,8 @@ def is_consonant(character):
         result = False
     return result
 
-x = is_consonant('a')
-print(x)
+#x = is_consonant('a')
+#print(x)
 
 #4 create a function that accepts a word as a string, then capitalizes the first letter of the word if it is a consonant
 def function_4(word):
@@ -37,21 +37,21 @@ def function_4(word):
         word = str.upper(word[0]) + word[1:]
     return word
 
-print(function_4('bye'))
+#print(function_4('bye'))
 
 #5 create a function that accepts a bill total and a tip percentage, and then returns a tip amount
 def calculate_tip(bill, tip_percent):
     tip_amount = bill * (tip_percent / 100)
     return tip_amount
 
-print(calculate_tip(10, 10))
+#print(calculate_tip(10, 10))
 
 #6 create a function that accepts an original price and a discount percentage, and then returns a discounted price
 def apply_discount(original_price, discount_percentage):
     discount_price = original_price - (original_price * (discount_percentage / 100))
     return discount_price
 
-print(apply_discount(100, 10))
+#print(apply_discount(100, 10))
 
 #7 create a function that accepts a string containing commas, and then counts the commas as output
 def handle_commas(str_input):
@@ -61,10 +61,10 @@ def handle_commas(str_input):
             counter += 1
     return counter
 
-print(handle_commas('qwerty,qwerty,qwerty,qwerty,'))
+#print(handle_commas('qwerty,qwerty,qwerty,qwerty,'))
 
 #8 create a function that accepts a number grade and returns a letter grade
-def get_leter_grade(score):
+def get_letter_grade(score):
     if score <= 100 and score >= 88:
         grade = 'A'
     elif score <= 87 and score >= 80:
@@ -79,7 +79,7 @@ def get_leter_grade(score):
         grade = 'Score is out of expected range'
     return grade
 
-print(get_leter_grade(90))
+#print(get_letter_grade(90))
 
 #9 create a function that accepts a string and returns a string with the vowels removed
 def remove_vowels(word):
@@ -89,7 +89,7 @@ def remove_vowels(word):
             new_word = new_word + letter
     return new_word
 
-print(remove_vowels('hello'))
+#print(remove_vowels('hello'))
 
 #10 create a function that will turn a string into a normalized name following common naming conventions
 def normalize_name(name):
@@ -102,11 +102,15 @@ def normalize_name(name):
             normalized_name = normalized_name + letter
     return normalized_name
 
-print(normalize_name('Ian Johnson!!!'))
+#print(normalize_name('Ian Johnson!!!'))
 
 #11 create a function that accepts a list of numbers and returns list of cumulative numbers
-def cumulative_sum(num_list):
+def cumulative_sum(number_list):
+    sum_list = []
+    current_sum = 0
+    for number in number_list:
+        current_sum += number
+        sum_list.append(current_sum)
+    return sum_list
 
-
-
-    
+#print(cumulative_sum([1, 2, 3]))
