@@ -10,44 +10,26 @@ price = sum_days * 3
 print(price)
 
 #create a list of pay rates and hours worked, then calculate the money earned
-pay_info = { 'employer' : ['Google', 'Amazon', 'Facebook'], 'pay_rate' : [400, 380, 350],
-            'hours_worked' : [6, 4, 10] }
-x = pay_info['pay_rate']
-x = x * 10
-print x
-print type(x[0:0])
+g=400
+a=380
+f=350
+print("$",(f*10)+(g*6)+(a*4))
 
-x_int = x
-x_int = ( int(i) for i in x_int )
-x_int = x_int *10
-print x_int
+# a student can only be enrolled if the class isn't full
+class_is_not_full = True
+no_conflict = True
+if class_is_not_full and no_conflict:
+    print("Enroll in class")
 
-#HAVING PROBLEMS BECAUSE MY NUMBERS FOR PAY AND HOURS ARE TYPE STRING
-p = [ int(i) for i in pay_info['pay_rate'] ]
-h = [ int(i) for i in pay_info['hours_worked'] ]
-earnings = p * h
-print earnings
-
-print 'These are the employers:', pay_info['employer']
-print 'These are the pay rates:', pay_info['pay_rate']
-print 'These are the hours worked:', pay_info['hours_worked']
-earnings = pay_info['pay_rate'] * pay_info['hours_worked']
-print(earnings)
-
-p = pay_info['pay_rate']
-h = 'hours_worked'
-print type(pay_info['pay_rate'])
-p = int(i) for i in pay_info['pay_rate']
-print type(pay_info['pay_rate'])
-
-
-
-earnings = p * h
-print earnings
-
-print(pay_info)
-print(pay_info:hours_worked)
-earnings = (pay_rate * hours_worked for employer in pay_info)
-print(earnings)
-pay_info = {employer : 'google', pay_rate : 400, hours_worked : 6}
-print(pay_info)
+# an offer can only be applied for more than two products and the offer has not expired
+more_than_two = True
+not_expired = True 
+premium_memeber = True
+apply_offer=1
+no_offer=0
+if more_than_two and  not_expired or premium_memeber:
+    apply_offer
+    print("apply offer")
+else:
+    no_offer
+    print("no offer")
